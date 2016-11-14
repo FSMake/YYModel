@@ -176,6 +176,11 @@ static force_inline NSDate *YYNSDateFromString(__unsafe_unretained NSString *str
             formatter4.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
             formatter4.dateFormat = @"yyyy-MM-dd HH:mm:ss.SSS";
             
+            NSDateFormatter *formatter5 = [[NSDateFormatter alloc] init];
+            formatter5.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+            formatter5.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+            formatter5.dateFormat = @"yyyy-MM-dd HH:mm";
+            
             blocks[19] = ^(NSString *string) {
                 if ([string characterAtIndex:10] == 'T') {
                     return [formatter1 dateFromString:string];
@@ -191,6 +196,11 @@ static force_inline NSDate *YYNSDateFromString(__unsafe_unretained NSString *str
                     return [formatter4 dateFromString:string];
                 }
             };
+            
+            blocks[16] = ^(NSString *string) {
+                return [formatter5 dateFromString:string];
+            };
+            
         }
         
         {
