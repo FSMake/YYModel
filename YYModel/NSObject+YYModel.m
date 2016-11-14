@@ -163,7 +163,7 @@ static force_inline NSDate *YYNSDateFromString(__unsafe_unretained NSString *str
             
             NSDateFormatter *formatter2 = [[NSDateFormatter alloc] init];
             formatter2.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
-            formatter2.timeZone = [NSTimeZone systemTimeZone];//[NSTimeZone systemTimeZone];
+            formatter2.timeZone = [NSTimeZone systemTimeZone];
             formatter2.dateFormat = @"yyyy-MM-dd HH:mm:ss";
 
             NSDateFormatter *formatter3 = [[NSDateFormatter alloc] init];
