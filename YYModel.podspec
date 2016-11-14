@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.authors      = { 'ibireme' => 'ibireme@gmail.com' }
   s.social_media_url = 'http://blog.ibireme.com'
-  s.homepage     = 'https://github.com/ibireme/YYModel'
+  s.homepage     = 'https://github.com/FSMake/YYModel'
 
   s.ios.deployment_target = '6.0'
   s.osx.deployment_target = '10.7'
